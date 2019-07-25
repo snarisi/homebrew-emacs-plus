@@ -113,13 +113,9 @@ class EmacsPlus < Formula
   end
 
   if build.with? "no-titlebar"
-    if build.head?
-      odie "--with-no-titlebar is not supported on --HEAD yet"
-    end
-
     patch do
-      url "https://raw.githubusercontent.com/d12frosted/homebrew-emacs-plus/master/patches/borderless-frame-on-macOS.patch"
-      sha256 "2059213cc740a49b131a363d6093913fa29f8f67227fc86a82ffe633bbf1a5f5"
+		url "https://raw.githubusercontent.com/snarisi/homebrew-emacs-plus/master/patches/borderless-frame-on-macOS.patch"
+		sha256 "2059213cc740a49b131a363d6093913fa29f8f67227fc86a82ffe633bbf1a5f5"
     end
   end
 
